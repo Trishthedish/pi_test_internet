@@ -110,6 +110,6 @@ value3=`echo $upload | cut -d" " -f1`
 json="{\"value1\":\"${value1}\",\"value2\":\"${value2}\",\"value3\":\"${value3}\"}"
 curl -X POST -H "Content-Type: application/json" -d "${json}" https://maker.ifttt.com/trigger/speedtest/with/key/cJ-suGaqKnru9izr3qfo3A
 
-print "Json = ${json}"
+# print "Json = ${json}"
 
 # will I need to include the key within {} brackets or should I elimiate it.
