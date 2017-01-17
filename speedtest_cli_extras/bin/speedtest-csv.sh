@@ -108,7 +108,7 @@ value1=`echo $server_ping | cut -d" " -f1`
 value2=`echo $download | cut -d" " -f1`
 value3=`echo $upload | cut -d" " -f1`
 json="{\"value1\":\"${value1}\",\"value2\":\"${value2}\",\"value3\":\"${value3}\"}"
-curl -X POST -H "Content-Type: application/json" -d "${json}" https://maker.ifttt.com/trigger/speedtest/with/key/cJ-suGaqKnru9izr3qfo3A
+curl -X POST -H "Content-Type: application/json" -d "${json}" https://maker.ifttt.com/trigger/speedtest/with/key/${secret_key}
 
 echo "Json = ${json}"
 
