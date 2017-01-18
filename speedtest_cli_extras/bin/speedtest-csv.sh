@@ -109,7 +109,7 @@ value2=`echo $download | cut -d" " -f1`
 value3=`echo $upload | cut -d" " -f1`
 json="{\"value1\":\"${value1}\",\"value2\":\"${value2}\",\"value3\":\"${value3}\"}"
 curl -X POST -H "Content-Type: application/json" -d "${json}" https://maker.ifttt.com/trigger/speedtest/with/key/${SECRET_KEY}
-
+echo "Hello, you're in speed script"
 curl -X POST -d "pi_data[ping]=20.11" -d "pi_data[download]=20.93" -d "pi_data[upload]=10.8" http://localhost:3000/rasberry_pis/index
 
 echo "Json = ${json}"
