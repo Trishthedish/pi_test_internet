@@ -1,5 +1,7 @@
 #!/bin/bash
 
-date >> /home/pi/speedtest.log
-./speedtest_cli_extras/bin/speedtest-csv.sh >> /home/pi/speedtest.log
-echo "" >> /home/pi/speedtest.log
+log="/home/pi/speedtest.log"
+
+date >> $log
+./pi_tests_internet/speedtest_cli_extras/bin/speedtest-csv.sh >> $log
+echo "" >> $log
