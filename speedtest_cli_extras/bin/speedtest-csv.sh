@@ -103,7 +103,7 @@ if test "$1" = "--standardize"; then
 fi
 
 # Send to IFTTT
-SECRET_KEY="SECRET_KEY"
+source ~/.env
 value1=`echo $server_ping | cut -d" " -f1`
 value2=`echo $download | cut -d" " -f1`
 value3=`echo $upload | cut -d" " -f1`
