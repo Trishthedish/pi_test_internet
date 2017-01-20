@@ -109,11 +109,12 @@ value2=`echo $download | cut -d" " -f1`
 value3=`echo $upload | cut -d" " -f1`
 json="{\"value1\":\"${value1}\",\"value2\":\"${value2}\",\"value3\":\"${value3}\"}"
 curl -X POST -H "Content-Type: application/json" -d "${json}" https://maker.ifttt.com/trigger/speedtest/with/key/$SECRET_KEY
-echo "Hello, you're in speed script"
+echo " Hello, you're in speed script"
 
 # Eventually, would like to replace hard coded data to ${json}. Commenting this out for now. 1/19. To figure out if its the reason for error.
 
-# curl -X POST -d "pi_data[ping]=20.11" -d "pi_data[download]=20.93" -d "pi_data[upload]=10.8" https://dude-whats-my-speed.herokuapp.com/
+curl -X POST -d "${json}" https://dude-whats-my-speed.herokuapp.com/
+
 echo "Your curl command has fired"
 
 echo "Json = ${json}"
