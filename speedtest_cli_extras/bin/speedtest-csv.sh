@@ -113,7 +113,8 @@ echo " Hello, you're in speed script"
 
 # Eventually, would like to replace hard coded data to ${json}. Commenting this out for now. 1/19. To figure out if its the reason for error.
 
-curl -X POST -d "${json}" https://dude-whats-my-speed.herokuapp.com/
+curl -X POST -d "${json}" https://dude-whats-my-speed.herokuapp.com/rasberry_pis/index
+
 
 echo "Your curl command has fired"
 
