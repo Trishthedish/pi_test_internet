@@ -97,7 +97,7 @@ else
 fi
 
 # Standardize units?
-if test "$1" = "--standardize"; then
+if test "$1" = "--standardize --debug"; then
   download=`echo $download | sed 's/Mbits/Mbit/'`
   upload=`echo $upload | sed 's/Mbits/Mbit/'`
 fi
